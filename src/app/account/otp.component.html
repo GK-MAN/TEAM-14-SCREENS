@@ -1,0 +1,22 @@
+<div class="card">
+    <h4 class="card-header">OTP (One Time Pin)</h4>
+    <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">OTP</label>
+                <p>Provide the OTP that was sent to your email address, we will verify that it is correct.</p>
+                <input id="otp" type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">OTP is required</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+
+                <a routerLink="../newpassword" class="btn btn-link">Submit</a>
+                <a routerLink="../login" class="btn btn-link">Close</a>
+
+            </div>
+        </form>
+    </div>
+</div>

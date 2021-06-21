@@ -1,0 +1,125 @@
+<html>
+  <head>
+      
+      
+
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand navbar-dark bg-primary" *ngIf="user">
+        <div class="navbar-nav">
+            <h3 class="system" style="color:white"><b>Onboarder System</b></h3>
+
+            <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+            <a class="nav-item nav-link"  (click)="logout()">Logout</a>
+
+            <div class="search">
+
+        <div>
+
+        </div>
+
+        <!-- Search form -->
+        <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+            
+        </div>
+
+    </div>
+
+
+</nav>
+      <div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="#" routerLink="/users" routerLinkActive="active">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            User
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Admin
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            Course
+                        </span>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Equipment
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                           Onboarder
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                       <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Report
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#" (click)="logout()">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+
+        <div class="mcw">
+
+            <alert></alert>
+
+            <router-outlet></router-outlet>
+
+            <div class="text-center mt-4">
+                <p>
+                    BMW - Onboarder System
+                </p>
+
+            </div>
+
+        </div>
+  </body>
+    </html> 
